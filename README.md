@@ -16,8 +16,9 @@ Este repositorio contiene los archivos necesarios para desplegar y ejecutar una 
 
 Para clonar este repositorio, abre una terminal y ejecuta el siguiente comando:
 
-bash
+
 git clone https://github.com/MarinNoSkill/apptriqui.git
+
 cd apptriqui
 
 
