@@ -57,7 +57,6 @@ touch ~/.aws/credentials
 
 4. Abre el archivo `credentials` en un editor de texto y añade tu `AWS Access Key ID` y `AWS Secret Access Key` en el siguiente formato:
 
-plaintext
 
 [default]
 
@@ -65,6 +64,9 @@ aws_access_key_id = TU_ACCESS_KEY_ID
 
 aws_secret_access_key = TU_SECRET_ACCESS_KEY
 
+
+"Recuerda que el AWS Key y el Acces key se obtienen desde [AWS](https://awsacademy.instructure.com/courses/70699/modules/items/6308904) 
+dandole en AWS Details y en AWS CLI, damos click en show y copiamos y pegamos en `credentials`"
 
 ### 5. Desplegar la Infraestructura en AWS con Terraform
 
