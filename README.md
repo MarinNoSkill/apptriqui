@@ -41,7 +41,7 @@ Deberías ver la versión de Terraform instalada.
 
 Terraform requiere acceso a tu cuenta de AWS para desplegar la infraestructura. Para configurar tus credenciales de AWS, sigue estos pasos:
 
-1. Instala aws cli desde la [página oficial](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+1. Instala AWS CLI desde la [página oficial](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 2. Crea un directorio llamado `.aws` en tu carpeta de inicio si no existe:
 
