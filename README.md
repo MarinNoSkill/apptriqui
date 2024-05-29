@@ -30,7 +30,7 @@ cd apptriqui
 
 Para verificar la instalación, ejecuta:
 
-bash
+
 terraform -v
 
 
@@ -44,13 +44,13 @@ Terraform requiere acceso a tu cuenta de AWS para desplegar la infraestructura. 
 
 2. Crea un directorio llamado `.aws` en tu carpeta de inicio si no existe:
 
-bash
+
 mkdir ~/.aws
 
 
 3. Dentro de ese directorio, crea un archivo llamado `credentials`:
 
-bash
+
 touch ~/.aws/credentials
 
 
@@ -68,7 +68,7 @@ aws_secret_access_key = TU_SECRET_ACCESS_KEY
 
 Antes de aplicar los cambios, debes inicializar el entorno de trabajo de Terraform. Desde el directorio donde clonaste el repositorio, ejecuta:
 
-bash
+
 terraform init
 
 
@@ -78,7 +78,7 @@ Este comando descarga los proveedores necesarios y prepara el entorno de trabajo
 
 Para desplegar la infraestructura, utiliza el comando `terraform apply`. Este comando creará todos los recursos definidos en los archivos de configuración de Terraform. Ejecuta:
 
-bash
+
 terraform apply
 
 
