@@ -1,57 +1,97 @@
-# Tic Tac Toe app
+ markdown
+# Aplicación Triqui
 
-This is a solution to the [Tic Tac Toe challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tic-tac-toe-game-Re7ZF_E2v). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+Este repositorio contiene los archivos necesarios para desplegar y ejecutar una aplicación en un contenedor Docker, así como los archivos Terraform necesarios para desplegar automáticamente la infraestructura en AWS.
 
-## Table of contents
+## Requisitos Previos
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-- [Author](#author)
+1. Tener instalado [Git](https://git-scm.com/).
+2. Tener instalado [Docker](https://www.docker.com/get-started).
+3. Tener instalado [Terraform](https://www.terraform.io/downloads).
+4. Una cuenta de AWS y configurar las credenciales de AWS en tu máquina local.
 
-## Overview
+## Instrucciones
 
-### The challenge
+### 1. Clonar el Repositorio
 
-Users should be able to:
+Para clonar este repositorio, abre una terminal y ejecuta el siguiente comando:
 
-- View the optimal layout for the game depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Play the game either solo vs the computer or multiplayer against another person(__solo player feature coming soon__)
-- **Bonus 1**: Save the game state in the browser so that it’s preserved if the player refreshes their browser(__coming soon__)
-- **Bonus 2**: Instead of having the computer randomly make their moves, try making it clever so it’s proactive in blocking your moves and trying to win(__coming soon__)
+bash
+git clone https://github.com/MarinNoSkill/apptriqui.git
+cd apptriqui
 
-### Screenshot
 
-![](./preview.jpg)
+### 2. Instalar Terraform y Configurar la Cuenta de AWS
 
-### Links
+#### Instalación de Terraform
 
-- Live Site URL: [Tic Tac Toe app](https://tic-tac-toe-trekab.netlify.app/)
+1. Descarga Terraform desde la [página oficial](https://www.terraform.io/downloads).
+2. Extrae el archivo descargado y coloca el ejecutable en un directorio incluido en tu variable de entorno `PATH`.
 
-## My process
+Para verificar la instalación, ejecuta:
 
-### Built with
+bash
+terraform -v
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
 
-### Running the app locally
-- Clone the repository
-- `cd` into the repository
-- Build the docker image: `docker build -t tic-tac-toe .`
-- Run the app: `docker run -p 3000:3000 tic-tac-toe`
-- Open the app at `http://localhost:3000/` in your browser
+Deberías ver la versión de Terraform instalada.
 
-## Author
+#### Configurar las Credenciales de AWS
 
-- Website - [Treasure Kabareebe](https://trekab.io/)
-- Frontend Mentor - [@trekab](https://www.frontendmentor.io/profile/trekab)
-- LinkedIn - [Treasure Kabareebe](https://www.linkedin.com/in/treasure-kabareebe/)
+Terraform requiere acceso a tu cuenta de AWS para desplegar la infraestructura. Para configurar tus credenciales de AWS, sigue estos pasos:
+
+1. Instala aws cli desde la [página oficial](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+
+2. Crea un directorio llamado `.aws` en tu carpeta de inicio si no existe:
+
+bash
+mkdir ~/.aws
+
+
+3. Dentro de ese directorio, crea un archivo llamado `credentials`:
+
+bash
+touch ~/.aws/credentials
+
+
+4. Abre el archivo `credentials` en un editor de texto y añade tu `AWS Access Key ID` y `AWS Secret Access Key` en el siguiente formato:
+
+plaintext
+[default]
+aws_access_key_id = TU_ACCESS_KEY_ID
+aws_secret_access_key = TU_SECRET_ACCESS_KEY
+
+
+### 5. Desplegar la Infraestructura en AWS con Terraform
+
+#### Inicializar Terraform
+
+Antes de aplicar los cambios, debes inicializar el entorno de trabajo de Terraform. Desde el directorio donde clonaste el repositorio, ejecuta:
+
+bash
+terraform init
+
+
+Este comando descarga los proveedores necesarios y prepara el entorno de trabajo.
+
+#### Aplicar los Cambios
+
+Para desplegar la infraestructura, utiliza el comando `terraform apply`. Este comando creará todos los recursos definidos en los archivos de configuración de Terraform. Ejecuta:
+
+bash
+terraform apply
+
+
+Se te pedirá confirmar la acción escribiendo `yes`. Terraform comenzará a crear los recursos en AWS.
+
+#### Verificar el Despliegue
+
+Una vez completado el comando `terraform apply`, puedes verificar en la consola de AWS que los recursos han sido creados correctamente.
+
+## Contribuciones
+
+Si deseas contribuir a este proyecto, por favor realiza un fork del repositorio y envía un pull request con tus cambios.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo [LICENSE](LICENSE).
