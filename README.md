@@ -7,6 +7,7 @@ Este repositorio contiene los archivos necesarios para desplegar y ejecutar una 
 
 1. Tener instalado [Git](https://git-scm.com/).
 2. Tener instalado [Docker](https://www.docker.com/get-started).
+`"Si es Ubuntu Puede ser instalado con sudo apt install docker-compose -y"`.
 3. Tener instalado [Terraform](https://www.terraform.io/downloads).
 4. Una cuenta de AWS y configurar las credenciales de AWS en tu máquina local.
 
