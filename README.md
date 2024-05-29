@@ -26,7 +26,7 @@ cd apptriqui
 
 #### Instalación de Terraform
 
-1. Descarga Terraform desde la [página oficial](https://www.terraform.io/downloads).
+1. Descarga Terraform desde [TERRAFORM](https://www.terraform.io/downloads).
 2. Extrae el archivo descargado y coloca el ejecutable en un directorio incluido en tu variable de entorno `PATH`.
 
 Para verificar la instalación, ejecuta:
@@ -41,7 +41,7 @@ Deberías ver la versión de Terraform instalada.
 
 Terraform requiere acceso a tu cuenta de AWS para desplegar la infraestructura. Para configurar tus credenciales de AWS, sigue estos pasos:
 
-1. Instala AWS CLI desde la [página oficial](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+1. Instala AWS CLI desde [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 2. Crea un directorio llamado `.aws` en tu carpeta de inicio si no existe:
 
@@ -58,8 +58,11 @@ touch ~/.aws/credentials
 4. Abre el archivo `credentials` en un editor de texto y añade tu `AWS Access Key ID` y `AWS Secret Access Key` en el siguiente formato:
 
 plaintext
+
 [default]
+
 aws_access_key_id = TU_ACCESS_KEY_ID
+
 aws_secret_access_key = TU_SECRET_ACCESS_KEY
 
 
