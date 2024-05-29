@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap");
+@import url("./css/Game.css");
+@import url("./css/NewGame.css");
+@import url("./css/Modal.css");
+
+:root {
+  --blue: #31c3bd;
+  --blue-hover: #65e9e4;
+  --yellow: #f2b137;
+  --yellow-hover: #ffc860;
+  --navy: #1a2a33;
+  --navy-hover: #1f3641;
+  --silver: #a8bfc9;
+  --silver-hover: #dbe8ed;
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--navy);
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-none {
+  display: none;
+}
